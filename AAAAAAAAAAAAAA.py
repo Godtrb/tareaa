@@ -19,8 +19,8 @@ def SumNAt(n):
 def Fibo(n):
     if n==1|n==2|n==3:
         return 1
-    else:
-        return n+ fact(n-1)
+    elif (n>3):
+        return (fact(n-1) + fact(n-2))
 opt=0
 while(opt!=7):
     print("----------Menu Mate---------------")
