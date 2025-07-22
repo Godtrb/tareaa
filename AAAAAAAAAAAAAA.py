@@ -70,3 +70,5 @@ while(opt!=7):
                     print(PotNum(num1,num2))
                 elif (num2 < 0):
                     print("Numero no puede ser negativo")
+            elif (num1 =< 0):
+                print("Numero no puede ser negativo o 0")
