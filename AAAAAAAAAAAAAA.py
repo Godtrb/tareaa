@@ -23,6 +23,11 @@ def Fibo(n):
         return Fibo(n-1) + Fibo(n-2)
 def TextInvert(x):
     return x[::-1]
+def PotNum(x,y):
+    if y == 0:
+        return 1
+    else:
+        return x*PotNum(x,y-1)
 opt=0
 while(opt!=7):
     print("----------Menu Mate---------------")
@@ -53,7 +58,15 @@ while(opt!=7):
                 print("Numero no puede ser 0 o negativo")
             else:
                 print(Fibo(num))
-        case 4:
+        case 5:
             text= input("Ingresa un texto: ")
             text = TextInvert(text)
             print(text)
+        case 6:
+            num1=int(input("Ingresa la base de la potencia: "))
+            if (num1 > 0):
+                num2=int(input("Ingresa el exponent de la potencia: "))
+                if (num2 > 0):
+                    print(PotNum(num1,num2))
+                elif (num2 < 0):
+                    print("Numero no puede ser negativo")
