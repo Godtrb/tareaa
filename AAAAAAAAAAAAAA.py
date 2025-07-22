@@ -15,12 +15,16 @@ def SumNAt(n):
             print(f"{n}:", end="")
         else:
             print(f"{n}+", end="")
-        return n + fact(n-1)
+        return n + sumNAt(n-1)
 def Fibo(n):
-    if n==1|n==2|n==3:
+    if n == 0:
         return 1
+    elif n==1|n==2|n==3:
+        return "1"
     elif (n>3):
-        return (fact(n-1) + fact(n-2))
+        return Fibo(n-1) + Fibo(n-2)
+def TextInvert(x):
+    return x[::-1]
 opt=0
 while(opt!=7):
     print("----------Menu Mate---------------")
@@ -51,3 +55,7 @@ while(opt!=7):
                 print("Numero no puede ser 0 o negativo")
             else:
                 print(Fibo(num))
+        case 4:
+            text= input("Ingresa un texto: ")
+            text = TextInvert(text)
+            print(text)
