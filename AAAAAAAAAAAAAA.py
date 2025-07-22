@@ -15,7 +15,7 @@ def SumNAt(n):
             print(f"{n}:", end="")
         else:
             print(f"{n}+", end="")
-        return n + sumNAt(n-1)
+        return n + SumNAt(n-1)
 def Fibo(n):
     if n == 0:
         return 1
